@@ -1,12 +1,10 @@
 package com.spring.test.Entity.Request;
 
-import com.spring.test.Entity.TipoUsuario;
 
 public class AddUserRequest {
     private String name;
     private String email;
     private String senha;
-    private TipoUsuario tipoUsuario;
 
 
     public String getSenha() {
@@ -31,13 +29,5 @@ public class AddUserRequest {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    public TipoUsuario getTipoUsuario() {
-        return tipoUsuario;
-    }
-
-    public void setTipoUsuario(TipoUsuario tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
     }
 }

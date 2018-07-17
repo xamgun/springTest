@@ -1,7 +1,6 @@
 package com.spring.test.Contoller;
 
 import com.spring.test.Entity.Request.AddUserRequest;
-import com.spring.test.Entity.TipoUsuario;
 import com.spring.test.Entity.User;
 import com.spring.test.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,7 @@ public class UserController {
 
     @Autowired
     public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
+      this.userRepository = userRepository;
     }
 
     @RequestMapping(method = RequestMethod.GET)
@@ -29,10 +28,8 @@ public class UserController {
     @RequestMapping(method = RequestMethod.POST)
     public void addUser(@RequestBody AddUserRequest addUserRequest) {
         User user = new User();
-        TipoUsuario tipoUsuario = new TipoUsuario();
         user.setName(addUserRequest.getName());
         user.setEmail(addUserRequest.getEmail());
-        user.setTipoUsuario(tipoUsuario);
         userRepository.save(user);
     }
 }

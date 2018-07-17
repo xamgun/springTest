@@ -13,9 +13,6 @@ public class User {
 
     private String email;
 
-    @ManyToOne
-    @JoinColumn(name = "tipoUsuario")
-    private TipoUsuario tipoUsuario;
 
 
 
@@ -43,11 +40,4 @@ public class User {
         this.email = email;
     }
 
-    public TipoUsuario getTipoUsuario() {
-        return tipoUsuario;
-    }
-
-    public void setTipoUsuario(TipoUsuario tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
-    }
 }
